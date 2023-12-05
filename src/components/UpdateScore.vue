@@ -18,15 +18,6 @@ const teamScores = ref([
 
 onMounted(()=>{
     socket = new WebSocket('ws://localhost:3000/primus');
-    
-    //listen for scores from web socket server
-    socket.onmessage=(event)=>{
-        let data = JSON.parse(event.data);
-        if (data.action === "updateScore"){
-        
-        };
-       
-    };
 });
 
 const updateScore = () => {
